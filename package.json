@@ -2,8 +2,9 @@
   "name": "deal-a-card",
   "version": "1.0.0",
   "description": "An app that sends a random card when a user types '/deal' in Slack",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
