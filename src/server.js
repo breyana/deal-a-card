@@ -17,9 +17,8 @@ app.post('/deal', (req, res) => {
   const cardNumber = cardNumbers[Math.floor(Math.random()*cardNumbers.length)]
   const suit = suits[Math.floor(Math.random()*suits.length)]
 
-  console.log('protocol:::', req.protocol)
-  console.log('hostname:::', req.hostname)
   const host = req.protocol + '://' + req.hostname
+  
   res.json({
     "text": "Is THIS your card?",
     "attachments": [{"image_url": `${host}/images/${cardNumber}${suit}.jpg`}]
