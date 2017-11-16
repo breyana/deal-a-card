@@ -18,13 +18,13 @@ app.post('/deal', (req, res) => {
   const suit = suits[Math.floor(Math.random()*suits.length)]
 
   const host = req.protocol + '://' + req.hostname
-  
+
   res.json({
     "text": "Is THIS your card?",
     "attachments": [{"image_url": `${host}/images/${cardNumber}${suit}.jpg`}]
   })
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('Listening on http://localhost:3000');
 })
